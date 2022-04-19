@@ -12,7 +12,7 @@
       
       <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Página no encontrada</li>
+      <li class="active">Página no encontrada estamos en construccion</li>
     
     </ol>
 
