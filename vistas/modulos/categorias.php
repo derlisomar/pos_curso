@@ -4,7 +4,7 @@
     
     <h1>
       
-      Administrar Categorias
+      Administrar Categorias de Derlis
     
     </h1>
 
