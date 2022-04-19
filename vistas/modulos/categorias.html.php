@@ -123,7 +123,7 @@
 </div>
 
 <!--=====================================
-MODAL AGREGAR CATEGORIA
+MODAL AGREGAR USUARIO
 ======================================-->
 
 <div id="modalAgregarCategoria" class="modal fade" role="dialog">
