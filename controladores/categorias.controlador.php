@@ -1,2 +1,72 @@
 <?php
 
+class ControladorCategorias{
+  
+
+    	/*=============================================
+	CREAR CATEGORIAS
+	=============================================*/
+
+	static public function ctrCrearCategoria(){
+
+		if(isset($_POST["nuevaCategoria"])){
+
+			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaCategoria"])){
+
+				$tabla = "categorias";  //llama la tabla que va a enviar a modelos para conectar con la bd
+
+				$datos = $_POST["nuevaCategoria"]; // en se almacena $datos se agregar la nueva categoria agregada en el id nuevaCategoria
+
+				$respuesta = ModeloCategorias::mdlIngresarCategoria($tabla, $datos); // con esto se envia a modelos los datos obtenidos
+
+				if($respuesta == "ok"){
+
+					echo'<script>
+
+					swal({
+						  type: "success",
+						  title: "La categoría ha sido guardada correctamente",
+						  showConfirmButton: true,
+						  confirmButtonText: "Cerrar"
+						  }).then(function(result){
+									if (result.value) {
+
+									window.location = "categorias";
+
+									}
+								})
+
+					</script>';
+
+				}
+
+
+			}else{
+
+				echo'<script>
+
+					swal({
+						  type: "error",
+						  title: "¡La categoría no puede ir vacía o llevar caracteres especiales!",
+						  showConfirmButton: true,
+						  confirmButtonText: "Cerrar"
+						  }).then(function(result){
+							if (result.value) {
+
+							window.location = "categorias";
+
+							}
+						})
+
+			  	</script>';
+
+			}
+
+		}
+
+	}
+
+
+
+
+}

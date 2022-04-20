@@ -184,6 +184,12 @@ MODAL AGREGAR CATEGORIA
 
         </div>
 
+        <?php
+          $crearCategoria = new ControladorCategorias();
+          $crearCategoria -> ctrCrearCategoria();
+          
+        ?>
+
       </form>
 
     </div>
