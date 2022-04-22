@@ -67,6 +67,18 @@ class ControladorCategorias{
 	}
 
 
+		/*=============================================
+	MOSTRAR CATEGORIA dentro de la clase  class ControladorCategorias
+	=============================================*/
+
+	static public function ctrMostrarCategoria($item, $valor){
+
+		$tabla = "categorias";
+
+		$respuesta = ModeloCategorias::MdlMostrarCategoria($tabla, $item, $valor);
+
+		return $respuesta;
+	}
 
 
 }

@@ -49,65 +49,42 @@
         </thead>
 
         <tbody>
-          
-          <tr>
+
+        <?php
+
+        $item = null;
+        $valor = null;
+
+          $categorias = ControladorCategorias::ctrMostrarCategoria($item, $valor);
+
+          foreach ($categorias as $key => $value) {
+              echo'
+              <tr>
             
-            <td>1</td>
-
-            <td>Equipos Electromecanicos</td>
-          
-            <td>
-
-              <div class="btn-group">
-                  
-                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
-
-                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-
-              </div>  
-
-            </td>
-
-          </tr>
-
-          <tr>
+              <td>'.($key+1).'</td>
+  
+              <td class="text-uppercase">'.$value["categoria"].'</td>
             
-            <td>1</td>
+              <td>
+  
+                <div class="btn-group">
+                    
+                  <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+  
+                  <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+  
+                </div>  
+  
+              </td>
+  
+            </tr>
+              ';
 
-            <td>Equipos Electromecanicos</td>
+
+          }
+
+        ?>
           
-            <td>
-
-              <div class="btn-group">
-                  
-                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
-
-                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-
-              </div>  
-
-            </td>
-
-
-          </tr>
-
-          <tr>
-            
-            <td>1</td>
-
-            <td>Equipos Electromecanicos</td>
-          
-            <td>
-
-              <div class="btn-group">
-                  
-                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
-
-                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-
-              </div>  
-
-            </td>
 
 
         </tbody>
@@ -162,7 +139,7 @@ MODAL AGREGAR CATEGORIA
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar Categoria" required>
+                <input type="text" class="form-control input-lg" name="nuevaCategoria" placeholder="Ingresar Categoria" id="nuevaCategoria" required>
 
               </div>
 
@@ -187,7 +164,7 @@ MODAL AGREGAR CATEGORIA
         <?php
           $crearCategoria = new ControladorCategorias();
           $crearCategoria -> ctrCrearCategoria();
-          
+
         ?>
 
       </form>
