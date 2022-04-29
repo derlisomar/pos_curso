@@ -17,6 +17,24 @@ public function ajaxValidarCategoria(){
     echo json_encode($respuesta);
 
 }
+
+	/*=============================================
+	EDITAR CATEGORÍA
+	=============================================*/	
+
+	public $idCategoria;
+
+	public function ajaxEditarCategoria(){
+
+		$item = "id";
+		$valor = $this->idCategoria;
+
+		$respuesta = ControladorCategorias::ctrMostrarCategoria($item, $valor);
+
+		echo json_encode($respuesta);
+
+	}
+
 }
 
 /*=============================================
@@ -29,4 +47,14 @@ if(isset( $_POST["validarCategoria"])){
 	$valCategoria -> validarCategoria = $_POST["validarCategoria"];
 	$valCategoria -> ajaxValidarCategoria();
 
+}
+
+/*=============================================
+EDITAR CATEGORÍA
+=============================================*/	
+if(isset($_POST["idCategoria"])){
+
+	$categoria = new AjaxCategoria();
+	$categoria -> idCategoria = $_POST["idCategoria"];
+	$categoria -> ajaxEditarCategoria();
 }
