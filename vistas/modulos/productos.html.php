@@ -34,7 +34,7 @@
 
       <div class="box-body">
         
-       <table class="table table-bordered table-striped dt-responsive tablasProductos" width="100%">
+       <table class="table table-bordered table-striped dt-responsive tablas">
          
         <thead>
          
@@ -55,57 +55,35 @@
 
         </thead>
 
-        <!-- <tbody>
-
-              <?php
-
-              $item = null;
-              $valor = null;
-
-              $productos = ControladorProductos::ctrMostrarProductos($item, $valor);
-
-              //var_dump($productos);
-
-              foreach ($productos as $key => $value) {
-                echo '
-                <tr>
-                <td>'.($key+1).'</td>
-                <td><img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
-                <td>'.$value["codigo"].'</td>
-                <td>'.$value["descripcion"].'</td>
-                ';
-
-                $item = "id";
-                $valor = $value["id_categoria"];
-
-                $categoria = ControladorCategorias::ctrMostrarCategoria($item, $valor);
-
-                echo '
-                <td>'.$categoria["categoria"].'</td>
-                <td>'.$value["stock"].'</td>
-                <td>'.$value["precio_compra"].'</td>
-                <td>'.$value["precio_venta"].'</td>
-                <td>'.$value["fecha"].'</td>
-                <td>
-
-                  <div class="btn-group">
-                      
-                    <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
-
-                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-
-                  </div>  
-
-                </td>
-
-              </tr>
-                ';
-              }
-
-              ?>
+        <tbody>
           
+          <tr>
+            <td>1</td>
+            <td><img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+            <td>0001</td>
+            <td>Lorem ipsum dolor sit amet consectetur</td>
+            <td>Lorem Insump</td>
+            <td>20</td>
+            <td>5.00</td>
+            <td>10.00</td>
+            <td>2017-12-11 12:05:32</td>
+            <td>
 
-        </tbody> -->
+              <div class="btn-group">
+                  
+                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+
+                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+
+              </div>  
+
+            </td>
+
+          </tr>
+
+
+
+        </tbody>
 
        </table>
 
